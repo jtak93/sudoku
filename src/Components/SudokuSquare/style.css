@@ -1,0 +1,7 @@
+.Sudoku-square {
+  width: 10%;
+  margin: 0 0;
+  border: 1px solid black;
+  min-height: 50px;
+  display: inline-flex;
+}
