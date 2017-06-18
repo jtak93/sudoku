@@ -10,7 +10,7 @@ class SudokuRow extends Component {
     return (
       <div className="Sudoku-row">
         { this.props.row.map((sq, idx) => {
-          return <SudokuSquare key={ idx } value={ sq }/>
+          return <SudokuSquare key={ idx } sq={ sq }/>
         }) }
       </div>
     );

@@ -5,3 +5,14 @@
   min-height: 50px;
   display: inline-flex;
 }
+
+.Immutable-sudoku-square {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.Mutable-sudoku-square {
+  width: 100%;
+  margin: 0 auto;
+}
