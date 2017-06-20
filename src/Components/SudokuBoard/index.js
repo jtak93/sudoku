@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
-import SudokuRow from '../SudokuRow';
+import SudokuSquare from '../SudokuSquare';
+import { Grid } from 'semantic-ui-react'
 
 const newBoard = [
   [0,0,0,2,6,0,7,0,1],
@@ -23,12 +24,58 @@ let board = newBoard.map( row => {
 })
 
 class SudokuBoard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      board: board
+    };
+
+    this.handleSquareClick = this.handleSquareClick.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
+  }
+
+  componentDidUpdate() {
+    console.log(this.state)
+  }
+  handleSquareClick(rowIdx, colIdx) {
+    console.log(rowIdx, colIdx)
+  }
+
+  handleInputChange(evt, data) {
+    const row = data.rowIndex;
+    const col = data.colIndex;
+    let newBoard = this.state.board;
+    // set new value
+    newBoard[row][col].value = data.value;
+    this.setState({
+      board: newBoard
+    })
+    console.log(this.state)
+  }
   render() {
     return (
       <div className="Sudoku-board">
-        { board.map((row, idx) => {
-          return <SudokuRow key={ idx } row={ row }/>
-        }) }
+        <Grid columns='nine' textAlign='center' celled>
+          { this.state.board.map((row, rowIndex) => {
+            return (
+              <Grid.Row key={rowIndex}>
+                { row.map((sq, colIndex) => {
+                  return (
+                    <Grid.Column key={colIndex} className='Grid-cell'>
+                      <SudokuSquare
+                        key={ colIndex }
+                        sq={ sq }
+                        rowIndex={ rowIndex }
+                        colIndex={ colIndex }
+                        onSquareClick={ this.handleSquareClick }
+                        onInputChange={ this.handleInputChange } />
+                    </Grid.Column>
+                  )
+                }) }
+              </Grid.Row>
+            )
+          }) }
+        </Grid>
       </div>
     );
   }
