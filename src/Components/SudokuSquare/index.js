@@ -5,8 +5,8 @@ const SudokuSquare = (props) => {
   let square;
   if (props.sq.isImmutable) {
     square = (
-      <h5>
-        <strong>{props.sq.value}</strong>
+      <h5 className='immutable'>
+        {props.sq.value}
       </h5>
     )
   } else {
