@@ -29,7 +29,7 @@ class OutsideAlerter extends Component {
      */
     handleClickOutside(event) {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target) && this.props.data.isActive) {
-            this.props.turnCellInactive()
+            this.props.turnCellInactive();
         }
     }
 

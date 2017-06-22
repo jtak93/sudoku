@@ -5,15 +5,15 @@ import { Grid } from 'semantic-ui-react';
 import OutsideAlerter from '../OutsideAlerter';
 
 const newBoard = [
-  [0,0,0,2,6,0,7,0,1],
-  [6,8,0,0,7,0,0,9,0],
-  [1,9,0,0,0,4,5,0,0],
-  [8,2,0,1,0,0,0,4,0],
-  [0,0,4,6,0,2,9,0,0],
-  [0,5,0,0,0,3,0,2,8],
-  [0,0,9,3,0,0,0,7,4],
-  [0,4,0,0,5,0,0,3,6],
-  [7,0,3,0,1,8,0,0,0]
+  ['','','',2,6,'',7,'',1],
+  [6,8,'','',7,'','',9,''],
+  [1,9,'','','',4,5,'',''],
+  [8,2,'',1,'','','',4,''],
+  ['','',4,6,'',2,9,'',''],
+  ['',5,'','','',3,'',2,8],
+  ['','',9,3,'','','',7,4],
+  ['',4,'','',5,'','',3,6],
+  [7,'',3,'',1,8,'','','']
 ]
 
 // To differentiate between starting numbers and immutable inputs
@@ -28,12 +28,37 @@ class SudokuBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      board: board
+      board: board,
+      activeCell: null
     };
 
     this.handleSquareClick = this.handleSquareClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.turnCellInactive = this.turnCellInactive.bind(this);
+  }
+
+  _handleKeyDown(event) {
+    // check to see if key pressed is 1-9 and is active
+    if (event.keyCode >= 49 && event.keyCode <= 57 && this.state.activeCell) {
+      const row = this.state.activeCell[0];
+      const col = this.state.activeCell[1];
+      let newBoard = this.state.board;
+      if (!newBoard[row][col].isImmutable) {
+        newBoard[row][col].isActive = false;
+        newBoard[row][col].value = event.keyCode - 48;
+      }
+      this.setState({
+        board: newBoard,
+        activeCell: null
+      })
+    }
+  }
+
+  componentWillMount() {
+    document.addEventListener("keydown", this._handleKeyDown.bind(this));
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this._handleKeyDown.bind(this));
   }
 
   handleSquareClick(rowIdx, colIdx, data, evt) {
@@ -43,7 +68,8 @@ class SudokuBoard extends Component {
       newBoard[rowIdx][colIdx].isActive = true;
     }
     this.setState({
-      board: newBoard
+      board: newBoard,
+      activeCell: [rowIdx, colIdx]
     })
   }
 
@@ -54,7 +80,8 @@ class SudokuBoard extends Component {
     // set new value
     newBoard[rowIdx][colIdx].isActive = false;
     this.setState({
-      board: newBoard
+      board: newBoard,
+      activeCell: null
     })
   }
 
