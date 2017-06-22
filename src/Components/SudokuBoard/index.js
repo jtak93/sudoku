@@ -33,7 +33,6 @@ class SudokuBoard extends Component {
     };
 
     this.handleSquareClick = this.handleSquareClick.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
     this.turnCellInactive = this.turnCellInactive.bind(this);
   }
 
@@ -85,16 +84,6 @@ class SudokuBoard extends Component {
     })
   }
 
-  handleInputChange(evt, data) {
-    const row = data.rowIndex;
-    const col = data.colIndex;
-    let newBoard = this.state.board;
-    // set new value
-    newBoard[row][col].value = data.value;
-    this.setState({
-      board: newBoard
-    })
-  }
   render() {
     return (
       <div className="Sudoku-board">
@@ -113,8 +102,7 @@ class SudokuBoard extends Component {
                           sq={ sq }
                           rowIndex={ rowIndex }
                           colIndex={ colIndex }
-                          onSquareClick={ this.handleSquareClick }
-                          onInputChange={ this.handleInputChange } />
+                          onSquareClick={ this.handleSquareClick } />
                       </OutsideAlerter>
                     </Grid.Column>
                   )
