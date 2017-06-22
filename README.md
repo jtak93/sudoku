@@ -1,7 +1,7 @@
 ## ABOUT
 This is a sudoku game made to practice react. Inspired by a codewars challenge that I solved.
 
-#Local Install
+# Local Install
 Clone and enter repo.
 ```
 git clone https://github.com/jtak93/sudoku.git [YourRepoName]
@@ -18,7 +18,7 @@ yarn install
 yarn start
 ```
 
-##IN PROGRESS
+## IN PROGRESS
 app is still in progress, but I am periodically deploying it:
 ```
 http://aws-website-sudoku-nv53y.s3-website-us-east-1.amazonaws.com/
