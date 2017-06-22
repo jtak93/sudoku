@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './style.css';
 import SudokuSquare from '../SudokuSquare';
-import { Grid } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react';
+import OutsideAlerter from '../OutsideAlerter';
 
 const newBoard = [
   [0,0,0,2,6,0,7,0,1],
@@ -18,8 +19,8 @@ const newBoard = [
 // To differentiate between starting numbers and immutable inputs
 let board = newBoard.map( row => {
   return row.map( value => {
-    if (value) return { value: value, isImmutable: true };
-    return { value: value, isImmutable: false };
+    if (value) return { value: value, isImmutable: true, isActive: false };
+    return { value: value, isImmutable: false, isActive: false };
   })
 })
 
@@ -30,15 +31,31 @@ class SudokuBoard extends Component {
       board: board
     };
 
-    this.handleSquareClick = this.handleSquareClick.bind(this)
-    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleSquareClick = this.handleSquareClick.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.turnCellInactive = this.turnCellInactive.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log(this.state)
+  handleSquareClick(rowIdx, colIdx, data, evt) {
+    // switch cell to active if cell is mutable
+    let newBoard = this.state.board;
+    if (!newBoard[rowIdx][colIdx].isImmutable) {
+      newBoard[rowIdx][colIdx].isActive = true;
+    }
+    this.setState({
+      board: newBoard
+    })
   }
-  handleSquareClick(rowIdx, colIdx) {
-    console.log(rowIdx, colIdx)
+
+  turnCellInactive(rowIdx, colIdx, data) {
+    var cell = data;
+    cell.isActive = false;
+    let newBoard = this.state.board;
+    // set new value
+    newBoard[rowIdx][colIdx].isActive = false;
+    this.setState({
+      board: newBoard
+    })
   }
 
   handleInputChange(evt, data) {
@@ -50,7 +67,6 @@ class SudokuBoard extends Component {
     this.setState({
       board: newBoard
     })
-    console.log(this.state)
   }
   render() {
     return (
@@ -60,15 +76,19 @@ class SudokuBoard extends Component {
             return (
               <Grid.Row key={rowIndex}>
                 { row.map((sq, colIndex) => {
+                  let border = 'hide-active';
+                  if (sq.isActive) border = 'show-active';
                   return (
-                    <Grid.Column key={colIndex} className='Grid-cell'>
-                      <SudokuSquare
-                        key={ colIndex }
-                        sq={ sq }
-                        rowIndex={ rowIndex }
-                        colIndex={ colIndex }
-                        onSquareClick={ this.handleSquareClick }
-                        onInputChange={ this.handleInputChange } />
+                    <Grid.Column key={colIndex} onClick={this.handleSquareClick.bind(this, rowIndex, colIndex, sq)} className={ border }>
+                      <OutsideAlerter data={sq} turnCellInactive={this.turnCellInactive.bind(this, rowIndex, colIndex, sq)}>
+                        <SudokuSquare
+                          key={ colIndex }
+                          sq={ sq }
+                          rowIndex={ rowIndex }
+                          colIndex={ colIndex }
+                          onSquareClick={ this.handleSquareClick }
+                          onInputChange={ this.handleInputChange } />
+                      </OutsideAlerter>
                     </Grid.Column>
                   )
                 }) }

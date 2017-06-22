@@ -1,4 +1,9 @@
-
+.show {
+  border: 4px solid black;
+}
+.hide {
+  border: none;
+}
 .Square-dropdown {
   position: relative;
   z-index: 10000;
