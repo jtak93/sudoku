@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import './style.css';
 import SudokuSquare from '../SudokuSquare';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Button, Message } from 'semantic-ui-react';
 import OutsideAlerter from '../OutsideAlerter';
 
 const newBoard = [
-  ['','','',2,6,'',7,'',1],
-  [6,8,'','',7,'','',9,''],
-  [1,9,'','','',4,5,'',''],
-  [8,2,'',1,'','','',4,''],
-  ['','',4,6,'',2,9,'',''],
-  ['',5,'','','',3,'',2,8],
-  ['','',9,3,'','','',7,4],
-  ['',4,'','',5,'','',3,6],
-  [7,'',3,'',1,8,'','','']
+  [7,4,8,5,9,3,1,6,2],
+  [1,3,5,4,6,2,9,7,8],
+  [2,6,9,1,7,8,4,5,3],
+  [5,1,6,8,3,4,2,9,7],
+  [4,9,7,6,2,5,8,3,1],
+  [8,2,3,9,1,7,5,4,6],
+  [6,5,1,7,8,9,3,2,4],
+  [9,8,2,3,4,6,7,1,5],
+  [3,7,'','','','',6,8,9]
 ]
 
 // To differentiate between starting numbers and immutable inputs
@@ -29,11 +29,15 @@ class SudokuBoard extends Component {
     super(props);
     this.state = {
       board: board,
-      activeCell: null
+      activeCell: null,
+      solutionValid: false,
+      showMessage:false,
     };
 
     this.handleSquareClick = this.handleSquareClick.bind(this);
     this.turnCellInactive = this.turnCellInactive.bind(this);
+    this.checkSolution = this.checkSolution.bind(this);
+    this.isValidSolution = this.isValidSolution.bind(this);
   }
 
   _handleKeyDown(event) {
@@ -48,7 +52,7 @@ class SudokuBoard extends Component {
       }
       this.setState({
         board: newBoard,
-        activeCell: null
+        activeCell: null,
       })
     }
   }
@@ -84,9 +88,72 @@ class SudokuBoard extends Component {
     })
   }
 
+  checkSolution() {
+    if (this.isValidSolution()) {
+      this.setState({
+        solutionValid: true,
+        showMessage:true,
+        message: 'You Win!'
+      })
+    } else {
+      this.setState({
+        solutionValid: false,
+        showMessage: true,
+        message: 'Not a Valid Solution'
+      })
+    }
+  }
+
+  isValidSolution() {
+    let isSolution = true;
+    //
+    //Check Rows
+    let boardValues = this.state.board.map(row => {
+      return row.map(col => {
+        return col.value
+      })
+    })
+
+    let rows = boardValues.map(row => {
+      // create copy to prevent mutation of board when sorting
+      let temp = row.slice();
+      let sortedRow = temp.sort().map((num, i) => {
+        if (num !== i + 1) isSolution = false;
+        return num;
+      })
+    })
+
+    // Check Columns
+    for (let i = 0; i < 9; i++) {
+      let col = boardValues.map(row => {
+        return row[i]
+      })
+      let sortedColumn = col.sort().map((num, i) => {
+        if (num !== i + 1) isSolution = false
+        return num;
+      })
+    }
+    // Check block 1,2,3,4,5,6,7,8,9
+    for (let j = 0; j <= 6; j+=3) {
+      for (let i = 0; i <= 6; i+=3) {
+        let block = boardValues[j].slice(i, i+3)
+          .concat(boardValues[j+1].slice(i, i+3))
+          .concat(boardValues[j+2].slice(i, i+3))
+
+        let sortedBlock = block.sort().map((num, idx) => {
+            if (num !== idx + 1) isSolution = false
+            return num
+        })
+      }
+    }
+
+    return isSolution;
+  }
+
   render() {
     return (
       <div className="Sudoku-board">
+        <Message error={!this.state.solutionValid} hidden={!this.state.showMessage} content={this.state.message} />
         <Grid columns='nine' textAlign='center' celled>
           { this.state.board.map((row, rowIndex) => {
             return (
@@ -111,6 +178,7 @@ class SudokuBoard extends Component {
             )
           }) }
         </Grid>
+        <Button onClick={this.checkSolution}>Check solution</Button>
       </div>
     );
   }
