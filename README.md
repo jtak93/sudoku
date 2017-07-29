@@ -29,7 +29,6 @@ http://aws-website-sudoku-nv53y.s3-website-us-east-1.amazonaws.com/
 -Styling
 -Add Prop Type validations
 -Add redux architecture with server back end to make data persist and more manageable.
--import solution checker/button (function that i made in codewars)
 
 Way down the line:
 -add random puzzle generator
