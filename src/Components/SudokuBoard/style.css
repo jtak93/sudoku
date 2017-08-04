@@ -1,6 +1,10 @@
-.Sudoku-board {
+.Sudoku-container {
   margin: 0 auto;
   width: 50%;
+}
+
+.Sudoku-board {
+  background: beige
 }
 
 .hide-active {
@@ -8,5 +12,21 @@
 }
 
 .show-active {
-  border: 2px solid red;
+  background: white
+}
+
+.Sudoku-board > :nth-child(3) {
+  border-bottom: 3px solid black
+}
+
+.Sudoku-board > :nth-child(6) {
+  border-bottom: 3px solid black
+}
+
+.board-row > :nth-child(3) {
+  border-right: 3px solid
+}
+
+.board-row > :nth-child(6) {
+  border-right: 3px solid
 }

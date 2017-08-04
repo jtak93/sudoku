@@ -152,17 +152,18 @@ class SudokuBoard extends Component {
 
   render() {
     return (
-      <div className="Sudoku-board">
+      <div className='Sudoku-container'>
         <Message error={!this.state.solutionValid} hidden={!this.state.showMessage} content={this.state.message} />
-        <Grid columns='nine' textAlign='center' celled>
+
+        <Grid className="Sudoku-board" columns='nine' textAlign='center' celled>
           { this.state.board.map((row, rowIndex) => {
             return (
-              <Grid.Row key={rowIndex}>
+              <Grid.Row className='board-row' key={rowIndex}>
                 { row.map((sq, colIndex) => {
                   let border = 'hide-active';
                   if (sq.isActive) border = 'show-active';
                   return (
-                    <Grid.Column key={colIndex} onClick={this.handleSquareClick.bind(this, rowIndex, colIndex, sq)} className={ border }>
+                    <Grid.Column className='board-square' key={colIndex} onClick={this.handleSquareClick.bind(this, rowIndex, colIndex, sq)} className={ border }>
                       <OutsideAlerter data={sq} turnCellInactive={this.turnCellInactive.bind(this, rowIndex, colIndex, sq)}>
                         <SudokuSquare
                           key={ colIndex }
