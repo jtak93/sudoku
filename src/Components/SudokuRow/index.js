@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SudokuSquare from '../SudokuSquare';
 import { Grid } from 'semantic-ui-react';
 
+import './style.css';
 
 class SudokuRow extends Component {
   render() {

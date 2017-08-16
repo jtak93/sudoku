@@ -3,6 +3,7 @@ import './style.css';
 import SudokuSquare from '../SudokuSquare';
 import { Grid, Button, Message } from 'semantic-ui-react';
 import OutsideAlerter from '../OutsideAlerter';
+import { SudokuCreate } from '../../utils/sudoku-helpers'
 
 const newBoard = [
   ['',4,8,'','','','',6,2],
@@ -62,6 +63,10 @@ class SudokuBoard extends Component {
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this._handleKeyDown.bind(this));
+  }
+
+  componentDidMount() {
+    console.log(SudokuCreate(9));
   }
 
   handleSquareClick(rowIdx, colIdx, data, evt) {
@@ -163,7 +168,7 @@ class SudokuBoard extends Component {
                   let border = 'hide-active';
                   if (sq.isActive) border = 'show-active';
                   return (
-                    <Grid.Column className='board-square' key={colIndex} onClick={this.handleSquareClick.bind(this, rowIndex, colIndex, sq)} className={ border }>
+                    <Grid.Column className={`board-square ${border}`} key={colIndex} onClick={this.handleSquareClick.bind(this, rowIndex, colIndex, sq)}>
                       <OutsideAlerter data={sq} turnCellInactive={this.turnCellInactive.bind(this, rowIndex, colIndex, sq)}>
                         <SudokuSquare
                           key={ colIndex }
