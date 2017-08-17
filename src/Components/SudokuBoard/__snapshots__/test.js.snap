@@ -1,0 +1,1246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sudoku Board renders 1`] = `
+<div
+  className="Sudoku-container"
+>
+  <div
+    className="ui error hidden message"
+  />
+  <div
+    className="ui celled center aligned nine column grid Sudoku-board"
+  >
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              4
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              8
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              6
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              2
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              5
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              6
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              8
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              1
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              4
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              8
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              2
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              9
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              6
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              5
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              3
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              3
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              7
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              1
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              9
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              9
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              4
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              7
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row board-row"
+    >
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              3
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              7
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5>
+              
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              6
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              8
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column hide-active"
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="Sudoku-square"
+          >
+            <h5
+              className="immutable"
+            >
+              9
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    className="ui button"
+    onClick={[Function]}
+    tabIndex={undefined}
+  >
+    Check solution
+  </button>
+</div>
+`;
